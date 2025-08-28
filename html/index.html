@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucker Job Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="trucker-nui" class="nui-container">
+        <div class="nui-header">
+            <h2><i class="fas fa-truck"></i> Delivery Services</h2>
+            <button class="close-btn" onclick="closeNUI()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="nui-content">
+            <div class="menu-section">
+                <div class="menu-item" onclick="spawnVehicle()">
+                    <i class="fas fa-car"></i>
+                    <span>Rent Vehicle</span>
+                </div>
+                
+                <div class="menu-item" onclick="returnVehicle()">
+                    <i class="fas fa-undo"></i>
+                    <span>Return Vehicle</span>
+                </div>
+                
+                <div class="menu-item" onclick="getPaycheck()">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Collect Paycheck</span>
+                </div>
+            </div>
+            
+            <div class="status-section">
+                <div class="status-item">
+                    <span class="status-label">Job Status:</span>
+                    <span id="job-status" class="status-value">Inactive</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Deliveries:</span>
+                    <span id="delivery-status" class="status-value">0/0</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Current Vehicle:</span>
+                    <span id="vehicle-status" class="status-value">None</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
